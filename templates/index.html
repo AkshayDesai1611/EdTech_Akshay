@@ -1,0 +1,186 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="templates/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">EdTech Course Price Prediction</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Institute Brand Value</h5>
+                            <!-- Departure -->
+                            <select name="Institute_brand_value" id="Source" required="required">
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Course Offered</h5>
+                            <!-- Arrival -->
+                            <select name="Course_Offered" id="Source" required="required">
+                                <option value="Tableau">Tableau</option>
+                                <option value="Data_Science">Data_Science</option>
+                                <option value="AI">AI</option>
+                                <option value="Ethical Hacking">Ethical_hacking</option>
+                                <option value="Full_stack">Full_stack</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Course Level</h5>
+                            <select name="Course_level" id="Source" required="required">
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Beginers">Beginers</option>
+                                <option value="Advance">Advance</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                           <h5>Total Course Hours</h5>
+                             <input id="second" name="Total_Course_Hours" required="required">
+                            <!-- Destination -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Webportal Lifetime Access</h5>
+                            <!-- Total Stops -->
+                            <select name="Webportal_LifetimeAccess" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Certification Exam</h5>
+                            <!-- Airline -->
+                            <select name="Certification_Exam" id="airline" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+ 
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Placement Offered</h5>
+                            <!-- Total Stops -->
+                            <select name="Placement_Offered" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+             </div>
+
+
+
+
+            <br>
+            <br>
+            <br>
+
+
+
+            <!-- Submit -->
+
+        <input type="submit" value="Calculate Course Price" class="btn btn-secondary">
+
+
+        </form>
+
+        <br>
+        <br>
+        <br>
+        <h5>{{ prediction_text }}</h5
+     
+
+    </div>
+     <br>
+     <br>
+     <br>
+
+
+
+</body>
+
+</html>
