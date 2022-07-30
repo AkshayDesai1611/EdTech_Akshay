@@ -13,7 +13,7 @@ lb = LabelEncoder()
 app = Flask(__name__)
 model = pickle.load(open('edtechrandommodel1.pkl', 'rb'))
 
-#@app.route('/',methods=['GET'])
+@app.route('/',methods=['GET'])
 @app.route("/")
 #@cross_origin()
 def Home():
